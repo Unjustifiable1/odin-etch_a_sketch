@@ -59,6 +59,43 @@ nav a:hover {
 }
 
 
+/* Main sections layer - grid area*/
+
+main {
+    background-color: var(--clr-primary-dark);
+    padding: 1.5em 8em;
+}
+
+.sectionContainer {
+    display: grid;
+    grid-template-columns: 25% auto;
+    row-gap: 1em;
+    column-gap: 8em;
+}
+
+.sectionContainer section {
+    background-color: var(--clr-primary-purple);
+}
+
+.ninjaTitle {
+    grid-row: 1;
+    grid-column: 1;
+}
+
+.ninjaControls {
+    grid-row: 2;
+    grid-column: 1;
+    height: 450px;
+}
+
+.ninjaSketch {
+    grid-row: 1 / span 2;
+    grid-column: 2;
+}
+
+
+
+
 /* header and footer defaults */
 
 header, footer {
