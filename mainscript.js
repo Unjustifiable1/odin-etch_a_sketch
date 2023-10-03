@@ -40,3 +40,15 @@ function removeSketchGrid() {
 
 // run sketch grid sizing immediately on page load
 gridResize();
+
+
+
+// sketch/drawing functionality
+const sketchBlocks = document.querySelectorAll('#sketchBlock');
+
+sketchBlocks.forEach((sketchBlock) => {
+    sketchBlock.addEventListener('click', () => {
+        sketchBlock.style.backgroundColor = 'salmon';
+    });
+});
+
