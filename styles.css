@@ -82,12 +82,13 @@ main {
 #ninjaTitle {
     grid-row: 1;
     grid-column: 1;
+    padding: 1em;
 }
 
 #ninjaControls {
     grid-row: 2;
     grid-column: 1;
-    height: 450px;
+    height: 400px;
 }
 
 #ninjaSketch {
@@ -123,11 +124,58 @@ main {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    gap: 3em;
+    gap: 2em;
 }
 
 
 
+/* Grid Size slider */
+
+.slidecontainer {
+  width: 60%; /* Width of the outside container */
+  height: 34px;
+}
+
+
+
+/* The slider itself */
+.gridslider {
+  -webkit-appearance: none;  /* Override default CSS styles */
+  appearance: none;
+  width: 100%; /* Full-width */
+  height: 34px; /* Specified height */
+  background: var(--clr-primary-cyan); /* Grey background */
+  outline: none; /* Remove outline */
+  opacity: 1; /* Set transparency (for mouse-over effects on hover) */
+  -webkit-transition: .2s; /* 0.2 seconds transition on hover */
+  transition: opacity .2s;
+}
+
+/* Mouse-over effects */
+.gridslider:hover {
+  opacity: 0.7; /* Fully shown on mouse-over */
+}
+
+/* The slider handle (use -webkit- (Chrome, Opera, Safari, Edge) and -moz- (Firefox) to override default look) */
+.gridslider::-webkit-slider-thumb {
+  -webkit-appearance: none; /* Override default look */
+  appearance: none;
+  width: 24px; /* Set a specific slider handle width */
+  height: 24px; /* Slider handle height */
+  background: #fff; /* handle background */
+  cursor: pointer; /* Cursor on hover */
+}
+
+.gridslider::-moz-range-thumb {
+  width: 24px; /* Set a specific slider handle width */
+  height: 24px; /* Slider handle height */
+  background: #fff; /* handle background */
+  cursor: pointer; /* Cursor on hover */
+}
+
+
+
+/* Switches - Eraser, Darken, Lighten */
 
 /* The switch - the box around the slider */
 .switch {
@@ -135,14 +183,14 @@ main {
     display: inline-block;
     width: 120px;
     height: 34px;
-  }
+}
   
 /* Hide default HTML checkbox */
 .switch input {
     opacity: 0;
     width: 0;
     height: 0;
-  }
+}
   
 /* The slider */
 .slider {
@@ -156,7 +204,7 @@ main {
     background-color: #888;
     -webkit-transition: .4s;
     transition: .4s;
-  }
+}
   
 .slider:before {
     position: absolute;
@@ -168,31 +216,30 @@ main {
     background-color: #fff;
     -webkit-transition: .4s;
     transition: .4s;
-  }
+}
   
-  input:checked + .slider {
+input:checked + .slider {
     background-color: var(--clr-primary-cyan);
-  }
+}
   
-  input:focus + .slider {
+input:focus + .slider {
     box-shadow: 0 0 8px var(--clr-primary-cyan);
-  }
+}
   
-  input:checked + .slider:before {
+input:checked + .slider:before {
     -webkit-transform: translateX(86px);
     -ms-transform: translateX(86px);
     transform: translateX(86px);
-  }
+}
 
-  /* Rounded sliders */
+/* Rounded sliders */
 /* .slider.round {
     border-radius: 34px;
-  }
+}
   
-  .slider.round:before {
+.slider.round:before {
     border-radius: 50%;
-  } */
-
+} */
 
 
 
