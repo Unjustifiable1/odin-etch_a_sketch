@@ -29,25 +29,32 @@
     
     <main>
         <div id="sectionContainer">
+
             <section id="ninjaTitle">
                 <h1>Sketch Ninja</h1>
             </section>
+
             <section id="ninjaControls">
-                Controls
                 <div>grid size</div>
                 <div>color</div>
-                <div>eraser</div>
-                <div>darken</div>
-                <div>lighten</div>
+                <label class="switch" id="eraserToggle">
+                    <input type="checkbox">
+                    <span class="slider">Eraser</span>
+                </label>
+                <label class="switch" id="darkenToggle">
+                    <input type="checkbox">
+                    <span class="slider">Darken</span>
+                </label>
+                <label class="switch" id="lightenToggle">
+                    <input type="checkbox">
+                    <span class="slider round">Lighten</span>
+                </label>
                 <div>clear</div>
             </section>
+
             <section id="ninjaSketch">
-                <!-- Sketch Grid -->
                 <div id="sketchGrid">
-                    <!-- <div class="sketchBlock"></div>
-                    <div class="sketchBlock"></div>
-                    <div class="sketchBlock"></div>
-                    <div class="sketchBlock"></div> -->
+                    <!-- grid will populate here based on selected grid size -->
                 </div>
             </section>
         </div>
