@@ -68,29 +68,29 @@ main {
     padding: 1.5em 12em;
 }
 
-.sectionContainer {
+#sectionContainer {
     display: grid;
     grid-template-columns: 30% auto;
     row-gap: 1em;
     column-gap: 12em;
 }
 
-.sectionContainer section {
+#sectionContainer section {
     background-color: var(--clr-primary-purple);
 }
 
-.ninjaTitle {
+#ninjaTitle {
     grid-row: 1;
     grid-column: 1;
 }
 
-.ninjaControls {
+#ninjaControls {
     grid-row: 2;
     grid-column: 1;
     height: 450px;
 }
 
-.ninjaSketch {
+#ninjaSketch {
     grid-row: 1 / span 2;
     grid-column: 2;
 }
@@ -98,7 +98,7 @@ main {
 
 /* sketch grid area */
 
-.sketchGrid {
+#sketchGrid {
     border: 3px solid grey;
     border-radius: 2px;
     padding: 1em;
@@ -108,7 +108,7 @@ main {
     flex-wrap: wrap;
 }
 
-.sketchBlock {
+#sketchBlock {
     background-color: #fff;
     border: 1px solid grey;
     /* flex: 1 1 auto; */
