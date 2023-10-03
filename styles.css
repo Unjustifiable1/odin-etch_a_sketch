@@ -1,4 +1,6 @@
 :root {
+    --grid-size: 2;
+
     --clr-unjustifiable-green: #45f835;
     --clr-unjustifiable-white: #fafad2;
 
@@ -63,14 +65,14 @@ nav a:hover {
 
 main {
     background-color: var(--clr-primary-dark);
-    padding: 1.5em 8em;
+    padding: 1.5em 12em;
 }
 
 .sectionContainer {
     display: grid;
-    grid-template-columns: 25% auto;
+    grid-template-columns: 30% auto;
     row-gap: 1em;
-    column-gap: 8em;
+    column-gap: 12em;
 }
 
 .sectionContainer section {
@@ -94,6 +96,24 @@ main {
 }
 
 
+/* sketch grid area */
+
+.sketchGrid {
+    border: 3px solid grey;
+    border-radius: 2px;
+    padding: 1em;
+    margin: 1em;
+    aspect-ratio: 1;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.sketchBlock {
+    background-color: #fff;
+    border: 1px solid grey;
+    /* flex: 1 1 auto; */
+    width: calc(100% / var(--grid-size) - 2px);
+}
 
 
 /* header and footer defaults */
