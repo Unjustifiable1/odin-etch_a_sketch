@@ -8,13 +8,13 @@ gridSlider.oninput = function() {
     gridSize = this.value;
     output.innerHTML = gridSize + " x " + gridSize;
     gridResize();
-    return;
 }
 
 
 // resize sketch grid
 const r = document.querySelector(':root');
 const sketchGrid = document.querySelector("#sketchGrid");
+let sketchBlocks = "";
 
 function gridResize() {
     removeSketchGrid();
@@ -22,9 +22,25 @@ function gridResize() {
     for (let i = 1; i <= gridSize * gridSize; i++) {
         const sketchBlock = document.createElement('div');
         sketchBlock.setAttribute('id', 'sketchBlock');
-        // sketchBlock.textContent = i;
+        // sketchBlock.textContent = i; // test grid size by numbering each block
         sketchGrid.appendChild(sketchBlock);
     }
+
+
+    // sketch/drawing functionality
+
+    sketchBlocks = document.querySelectorAll('#sketchBlock');
+    sketchBlocks.forEach((sketchBlock) => {
+        sketchBlock.addEventListener('click', () => {
+            let eraserToggle = document.getElementById('eraserToggle').checked;
+            console.log(eraserToggle);
+            if (eraserToggle === false) {
+                sketchBlock.style.backgroundColor = 'var(--clr-bg-selected)';
+            } else {
+                sketchBlock.style.backgroundColor = 'var(--clr-bg-eraser)';
+            }
+        });
+    });
 }
 
 
@@ -43,12 +59,5 @@ gridResize();
 
 
 
-// sketch/drawing functionality
-const sketchBlocks = document.querySelectorAll('#sketchBlock');
 
-sketchBlocks.forEach((sketchBlock) => {
-    sketchBlock.addEventListener('click', () => {
-        sketchBlock.style.backgroundColor = 'salmon';
-    });
-});
 

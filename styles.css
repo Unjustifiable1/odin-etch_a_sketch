@@ -1,5 +1,5 @@
 :root {
-    --grid-size: 2;
+    --grid-size: 16;
 
     --clr-unjustifiable-green: #45f835;
     --clr-unjustifiable-white: #fafad2;
@@ -8,6 +8,8 @@
     --clr-primary-purple: #3c1f5a;
     --clr-primary-cyan: #35c3b8;
 
+    --clr-bg-selected: hsl(0, 0%, 0%);
+    --clr-bg-eraser: #fff;
 }
 
 
@@ -65,14 +67,14 @@ nav a:hover {
 
 main {
     background-color: var(--clr-primary-dark);
-    padding: 1.5em 12em;
+    padding: 1.5em 18%;
 }
 
 #sectionContainer {
     display: grid;
     grid-template-columns: 30% auto;
     row-gap: 1em;
-    column-gap: 12em;
+    column-gap: 15%;
 }
 
 #sectionContainer section {
@@ -110,10 +112,18 @@ main {
 }
 
 #sketchBlock {
-    background-color: #fff;
+    background-color: #ccc;
     border: 1px solid grey;
     /* flex: 1 1 auto; */
     width: calc(100% / var(--grid-size) - 2px);
+}
+
+.bgSelected {
+    background-color: var(--clr-bg-selected);
+}
+
+.bgEraser {
+    background-color: var(--clr-bg-eraser);
 }
 
 
