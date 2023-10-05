@@ -54,6 +54,17 @@ function removeSketchGrid() {
 }
 
 
+// clear sketch grid color to default
+
+const clearBtn = document.getElementById('clearBtn');
+
+clearBtn.addEventListener('click', () => {
+    sketchBlocks.forEach((sketchBlock) => {
+        sketchBlock.style.backgroundColor = 'var(--clr-bg-default)';
+    });
+});
+
+
 // run sketch grid sizing immediately on page load
 gridResize();
 

@@ -8,6 +8,7 @@
     --clr-primary-purple: #3c1f5a;
     --clr-primary-cyan: #35c3b8;
 
+    --clr-bg-default: #ccc;
     --clr-bg-selected: hsl(0, 0%, 0%);
     --clr-bg-eraser: #fff;
 }
@@ -99,7 +100,7 @@ main {
 }
 
 
-/* sketch grid section */
+/* SKETCH GRID SECTION */
 
 #sketchGrid {
     border: 3px solid grey;
@@ -112,10 +113,11 @@ main {
 }
 
 #sketchBlock {
-    background-color: #ccc;
+    background-color: var(--clr-bg-default);
     border: 1px solid grey;
     /* flex: 1 1 auto; */
     width: calc(100% / var(--grid-size) - 2px);
+    cursor: crosshair;
 }
 
 .bgSelected {
@@ -127,7 +129,10 @@ main {
 }
 
 
-/* controls section */
+
+
+
+/* CONTROLS SECTION */
 
 #ninjaControls {
     display: flex;
@@ -157,8 +162,8 @@ main {
   background: var(--clr-primary-cyan); /* Grey background */
   outline: none; /* Remove outline */
   opacity: 1; /* Set transparency (for mouse-over effects on hover) */
-  -webkit-transition: .2s; /* 0.2 seconds transition on hover */
-  transition: opacity .2s;
+  -webkit-transition: .4s; /* 0.4 seconds transition on hover */
+  transition: opacity .4s;
 }
 
 /* Mouse-over effects */
@@ -252,9 +257,27 @@ input:checked + .slider:before {
 } */
 
 
+/* clear button */
+
+#clearBtn {
+    background-color: var(--clr-primary-cyan);
+    padding: 8px 32px;
+    cursor: pointer;
+    border: none;
+    -webkit-transition: .4s;
+    transition: .4s;
+}
+
+#clearBtn:hover {
+    background-color: #888;
+    box-shadow: 0 0 8px var(--clr-primary-cyan);
+}
+  
 
 
-/* header and footer defaults */
+
+
+/* HEADER AND FOOTER */
 
 header, footer {
     background-color: var(--clr-primary-purple);
