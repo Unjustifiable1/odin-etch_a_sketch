@@ -11,6 +11,19 @@ gridSlider.oninput = function() {
 }
 
 
+// Pencil color selection
+
+// initial color
+const pencilInput = document.getElementById('pencolor');
+let pencilColor = pencilInput.value;
+
+// // changing color
+pencilInput.oninput = function() {
+    pencilColor = this.value;
+}
+
+
+
 // resize sketch grid
 const r = document.querySelector(':root');
 const sketchGrid = document.querySelector("#sketchGrid");
@@ -33,9 +46,8 @@ function gridResize() {
     sketchBlocks.forEach((sketchBlock) => {
         sketchBlock.addEventListener('click', () => {
             let eraserToggle = document.getElementById('eraserToggle').checked;
-            console.log(eraserToggle);
             if (eraserToggle === false) {
-                sketchBlock.style.backgroundColor = 'var(--clr-bg-selected)';
+                sketchBlock.style.backgroundColor = pencilColor; // 'var(--clr-bg-selected)';
             } else {
                 sketchBlock.style.backgroundColor = 'var(--clr-bg-eraser)';
             }
@@ -55,7 +67,6 @@ function removeSketchGrid() {
 
 
 // clear sketch grid color to default
-
 const clearBtn = document.getElementById('clearBtn');
 
 clearBtn.addEventListener('click', () => {
@@ -63,6 +74,7 @@ clearBtn.addEventListener('click', () => {
         sketchBlock.style.backgroundColor = 'var(--clr-bg-default)';
     });
 });
+
 
 
 // run sketch grid sizing immediately on page load

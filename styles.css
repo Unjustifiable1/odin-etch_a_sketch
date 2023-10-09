@@ -9,7 +9,7 @@
     --clr-primary-cyan: #35c3b8;
 
     --clr-bg-default: #ccc;
-    --clr-bg-selected: hsl(0, 0%, 0%);
+    --clr-bg-selected: #ff0000;
     --clr-bg-eraser: #fff;
 }
 
