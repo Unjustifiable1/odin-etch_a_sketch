@@ -9,8 +9,9 @@
     --clr-primary-cyan: #35c3b8;
 
     --clr-bg-default: #ccc;
-    --clr-bg-selected: #ff0000;
     --clr-bg-eraser: #fff;
+
+    --clr-bg-test: #19e67d;
 }
 
 
