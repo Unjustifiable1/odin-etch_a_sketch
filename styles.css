@@ -23,6 +23,7 @@
     font-size: 1rem;
     font-weight: 400;
     text-align: center;
+    box-sizing: border-box;
 
     /* border: 1px solid red; */
 }
@@ -70,6 +71,10 @@ nav a:hover {
 main {
     background-color: var(--clr-primary-dark);
     padding: 1.5em 18%;
+    min-height: 100dvh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 #sectionContainer {
@@ -98,6 +103,7 @@ main {
 #ninjaSketch {
     grid-row: 1 / span 2;
     grid-column: 2;
+    aspect-ratio: 1;
 }
 
 
@@ -115,7 +121,7 @@ main {
 
 #sketchBlock {
     border: 1px solid grey;
-    width: calc(100% / var(--grid-size) - 2px);
+    width: calc(100% / var(--grid-size)); /*  - 2px needed when not using box-sizing: border-box*/
     cursor: crosshair;
 }
 
@@ -282,13 +288,17 @@ header, footer {
     background-color: var(--clr-primary-purple);
     color: var(--clr-unjustifiable-white);
     padding: 0.25em 4em;
+    position: fixed;
+    left: 0;
+    width: 100svw;
+}
+
+header {
+    top: 0;
 }
 
 footer {
-    position: fixed;
-    left: 0;
-    bottom: 0;
-    width: 100%;
+    bottom: 0;;
 }
 
 
