@@ -97,12 +97,14 @@ main {
 #ninjaControls {
     grid-row: 2;
     grid-column: 1;
-    height: 400px;
+    max-height: 400px;
+    padding: 1em;
 }
 
 #ninjaSketch {
     grid-row: 1 / span 2;
     grid-column: 2;
+    height: 100%;
     aspect-ratio: 1;
 }
 
@@ -144,7 +146,7 @@ main {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    gap: 2em;
+    gap: 1.5em;
 }
 
 
@@ -152,8 +154,9 @@ main {
 /* Grid Size slider */
 
 .slidecontainer {
-  width: 60%; /* Width of the outside container */
+  width: 80%; /* Width of the outside container */
   height: 34px;
+  margin-bottom: 1em;
 }
 
 
@@ -192,6 +195,10 @@ main {
   background: #fff; /* handle background */
   cursor: pointer; /* Cursor on hover */
 }
+
+
+/* Color Picker */
+
 
 
 
