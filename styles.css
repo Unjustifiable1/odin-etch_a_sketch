@@ -70,7 +70,7 @@ nav a:hover {
 
 main {
     background-color: var(--clr-primary-dark);
-    padding: 1.5em 18%;
+    padding: 1.5em 15%;
     min-height: 100dvh;
     display: flex;
     justify-content: center;
@@ -81,7 +81,7 @@ main {
     display: grid;
     grid-template-columns: 30% auto;
     row-gap: 1em;
-    column-gap: 15%;
+    column-gap: 12%;
 }
 
 #sectionContainer section {
@@ -136,6 +136,14 @@ main {
 }
 
 
+/* TITLE SECTION */
+
+#ninjaTitle h1 {
+    font-size: 1.6rem;
+    font-weight: bold;
+    color: var(--clr-primary-cyan);
+}
+
 
 
 
@@ -159,6 +167,9 @@ main {
   margin-bottom: 1em;
 }
 
+.slidecontainer p {
+    color: var(--clr-primary-cyan);
+}
 
 
 /* The slider itself */
@@ -199,6 +210,9 @@ main {
 
 /* Color Picker */
 
+.colorContainer label {
+    color: var(--clr-primary-cyan);
+}
 
 
 
